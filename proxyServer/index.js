@@ -1,26 +1,53 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-// UNCOMMENT THE DATABASE YOU'D LIKE TO USE
-// var items = require('../database-mysql');
-var items = require('../database-mongo');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const request = require('request');
 
 var app = express();
-
-app.use(express.static(__dirname + '/../react-client/dist'));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
 
-app.get('/items', function (req, res) {
-  console.log("In get");
-  items.selectAll(function(err, data) {
-    if(err) {
-      res.sendStatus(500);
-    } else {
-      res.json(data);
-    }
+
+
+// console.log that your server is up and running
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../client/dist'));
+
+app.route('/api/properties/:propertyId')
+  .get(function(req, result, next) {
+    let servicePropId = req.params.propertyId;
+    var properties = [];
+    console.log("propertyId = ", servicePropId);
+    request({
+      url: 'http://localhost:3001/api/properties/' + servicePropId,
+      method: 'GET',
+      qs: {
+        limit: 1
+      }
+    }, function(err, res, body) {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Got results from 3001");
+        properties = JSON.parse(body);
+        console.log("in request, properties:", properties);
+        result.send(properties);
+      }
   });
+});
+
+app.route('api/reviews/:propertyId')
+  .get(function(req, result, next) {
+    console.log("reviews");
+});
+
+app.route('api/calendar/:propertyId')
+  .get(function(req, result, next) {
+    console.log("calendar");
 });
 
 app.listen(2000, function() {
