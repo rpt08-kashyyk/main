@@ -13,20 +13,6 @@ class App extends React.Component {
     console.log('index cosntructor', this.state)
   }
 
-  componentDidMount() {
-    // $.ajax({
-    //   url: '/api/properties/1',
-    //   success: (data) => {
-    //     this.setState({
-    //       currentPropertyId: data
-    //     })
-    //   },
-    //   error: (err) => {
-    //     console.log('err', err);
-    //   }
-    // });
-  }
-
   render () {
     return (
       <div>

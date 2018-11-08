@@ -15,11 +15,10 @@ import Amenities from './components/amenities.jsx';
 class PropertyMain extends React.Component {
   constructor(props) {
     super(props);
-    var propId = this.props.propertyId;
     this.state = {
       amenities: [],
       properties: [],
-      currentPropertyId: propId,
+      currentPropertyId: this.props.propertyId,
       currentProperty: {},
       showDesc: false,
       showBtnLabel: "Read more about the space",
@@ -27,7 +26,7 @@ class PropertyMain extends React.Component {
       hasData: false
     }
 
-     this.getProperties = this.getProperties.bind(this);
+     this.getPropertyDetails = this.getPropertyDetails.bind(this);
      this.toggleDescDisplay = this.toggleDescDisplay.bind(this);
      this.getAmenities = this.getAmenities.bind(this);
      this.showAmenitiesModal = this.showAmenitiesModal.bind(this);
@@ -66,14 +65,13 @@ class PropertyMain extends React.Component {
     this.setState({showDesc: !show});
   }
 
-  getProperties() {
+  getPropertyDetails() {
     console.log("in get properties");
     let serverRoute = '/api/properties/' + this.props.propertyId;
     $.get(serverRoute, data => {
       console.log("Get properties data: ", data)
       this.setState({
-        properties: data,
-        currentProperty: data[0],
+        currentProperty: data,
         hasData: true
       });
     });
@@ -97,7 +95,7 @@ class PropertyMain extends React.Component {
   }
 
   componentDidMount(){
-    this.getProperties();
+    this.getPropertyDetails();
     console.log("From did mount, state: ", this.state);
   }
 
@@ -125,7 +123,6 @@ class PropertyMain extends React.Component {
         )
       return (
         <div>
-
             <Jumbo currentProp={this.state.currentProperty} />
             <Property property={this.state.currentProperty}/>
             <Grid>
