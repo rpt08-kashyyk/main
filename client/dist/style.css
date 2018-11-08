@@ -1,0 +1,233 @@
+* {
+ /* font-family: 'Montserrat', sans-serif;*/
+ font-family: 'Muli', sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+.navbar {
+  background: #fff;
+  margin-bottom: 0px;
+  position:static;
+}
+
+.navbar img {
+  height: 40px;
+  width: 50px;
+}
+
+.navbar-nav {
+  margin-top: 20px;
+}
+
+.search-bar {
+  border-radius: 1px;
+  background: #fff;
+}
+
+.search-bar .form-control {
+  border-radius: 2px;
+  width: 80%
+}
+.search-bar .btn {
+  border-radius: 2px;
+  border-color: #d3d3d3;
+  background: #f8f8f8;
+  width: 20%;
+  margin-left: -1px;
+}
+
+.navbar-form {
+  position: abslolute;
+  top: 50%;
+  margine-top: 20px;
+}
+
+/*.navbar-inverse .navbar-nav>.active>a {
+  background-color: white;
+}*/
+
+/*.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar-brand>img {
+  padding: 7px 14px;
+}*/
+
+ .navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+.search-bar .btn:hover {
+  border-color: #c6c6c6;
+  background: #f0f0f0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+}
+
+/*.form-group {
+  box-shadow: 1px 2px 3px 2px #cccccc;
+  box-shadow: inset 0px #ffffff;
+}
+*/
+.input {
+  box-shadow: inset 0px #ffffff;
+  background: #ffffff;
+  border: none;
+}
+
+.form-control {
+  background: #ffffff;
+  border-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  align-items: center;
+}
+
+.input-group-addon {
+  background: #ffffff;
+  border-color: #ffffff;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  position: absolute;
+
+}
+
+.imagesWrapper {
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  max-width: 100%;
+  /*height: vh;*/
+  position: relative;
+  height: 500px;
+  background-color: #5b5b5b;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin: 30px, auto;
+}
+
+.imageBox {
+  background-size: cover;
+  background-repeat: no-repeat;
+/*  background-image: url('https://s3-us-west-1.amazonaws.com/lsfirebnb/3/01.png');*/
+}
+
+.imageBox.imageLarge {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.imageBox.imageSmall {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.infoBtn:hover, .infoBtn:active {
+    background-color: white;
+    text-decoration: underline;
+    box-shadow:
+}
+
+.jumbotron {
+  height: 500px;
+  background-color: #3b3b3b;
+  position: relative;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-top: 0em;
+  /*display: flex;*/
+ /* justify-content: right;
+  align-items: right;*/
+}
+
+.jumbo-img {
+
+}
+
+.jumbo-btn-save {
+  position: absolute;
+  float: right;
+  right: 30px;
+  top: 5%;
+}
+
+.jumbo-btn-share {
+  position: absolute;
+  float: right;
+  right: 150px;
+  top: 5%;
+
+}
+
+.jumbo-btn-photos {
+  position: absolute;
+  /*display: flex;*/
+  float: right;
+  right: 30px;
+  top: 85%;
+
+ /* right: 30px;*/
+ /* top: 199px;*/
+}
+
+.grid-images {
+  position: relative;
+}
+
+p {
+  line-height: 1.8
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: black;
+  line-height: 16px;
+}
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.w100 {
+  font-weight: 100;
+}
+.w200 {
+  font-weight: 200;
+}
+.w300 {
+  font-weight: 300;
+}
+.w400 {
+  font-weight: 400;
+}
+
+.w500 {
+  font-weight: 500;
+}
+
+.w600 {
+  font-weight: 600;
+}
