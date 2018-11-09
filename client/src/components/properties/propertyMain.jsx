@@ -17,8 +17,6 @@ class PropertyMain extends React.Component {
     super(props);
     this.state = {
       amenities: [],
-      properties: [],
-      currentPropertyId: this.props.propertyId,
       currentProperty: {},
       showDesc: false,
       showBtnLabel: "Read more about the space",
@@ -65,9 +63,9 @@ class PropertyMain extends React.Component {
     this.setState({showDesc: !show});
   }
 
-  getPropertyDetails() {
-    console.log("in get properties");
-    let serverRoute = '/api/properties/' + this.props.propertyId;
+  getPropertyDetails(newPropId) {
+    console.log("in get properties details: ", newPropId);
+    let serverRoute = '/api/properties/' + newPropId;
     $.get(serverRoute, data => {
       console.log("Get properties data: ", data)
       this.setState({
@@ -77,7 +75,8 @@ class PropertyMain extends React.Component {
     });
   }
 
-   getAmenities() {
+
+  getAmenities() {
     //console.log("in get amenities");
     let serverRoute = '/api/amenitites';
     $.get(serverRoute, data => {
@@ -95,8 +94,17 @@ class PropertyMain extends React.Component {
   }
 
   componentDidMount(){
-    this.getPropertyDetails();
+    this.getPropertyDetails(this.props.propertyId);
     console.log("From did mount, state: ", this.state);
+  }
+
+
+  componentWillReceiveProps(props) {
+    console.log("!!!!!!!!!!in propertyMain, will receive props", props.propertyId);
+    const prevPropId = this.props.propertyId;
+    if (props.propertyId !== prevPropId) {
+      this.getPropertyDetails(props.propertyId)
+    }
   }
 
   render() {
@@ -117,7 +125,7 @@ class PropertyMain extends React.Component {
 
         return (
           <div>
-           <p>Loading..</p>
+           <p>Waiting for selection</p>
           </div>
 
         )
