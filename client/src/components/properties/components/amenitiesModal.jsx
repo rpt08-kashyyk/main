@@ -1,11 +1,23 @@
+import React from 'react';
+import { Modal, Button} from 'react-bootstrap';
+import $ from 'jquery';
+
 class AmenitiesModal extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: true
+     }
+    this.handleClose = this.handleClose.bind(this);
+  }
 
-
+  handleClose () {
+    this.setState({show: false})
+    console.log("Modal - in handle Close");
+    this.props.hideAmenities();
+  }
 
   render() {
-
     return (
       <div>
         <Modal show={this.state.show} onHide={this.handleClose}>

@@ -10,6 +10,7 @@ import FirebnbHeader from './components/header.jsx';
 import Property from './components/property.jsx';
 import PropertyDesc from './components/propertyDesc.jsx';
 import Amenities from './components/amenities.jsx';
+import AmenitiesModal from './components/amenitiesModal.jsx';
 
 class PropertyMain extends React.Component {
   constructor(props) {
@@ -140,11 +141,14 @@ class PropertyMain extends React.Component {
                   <Button bsSize="large" style={buttonStyle}>Contact Host</Button>
                </div>
               <Row>
-                <Col md={7}>
+                <Col md={11}>
                   <Amenities currentProp={this.state.currentProperty}/>
                   <Button bsSize="large" onClick = {this.showAmenitiesModal} style={buttonStyle}>Show all amenities</Button>
                 </Col>
               </Row>
+              <div>
+                {this.state.showAmenitiesModal && <AmenitiesModal hideAmenities={this.handleAmenitiesClose} currentProperty={this.state.currentProperty} />}
+              </div>
           </div>
         )
   }
