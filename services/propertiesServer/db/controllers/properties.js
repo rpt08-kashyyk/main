@@ -3,8 +3,6 @@ var Promise = require('bluebird');
 mongoose.Promise = require('bluebird');
 var db = require('../index.js');
 
-
-
 // get all the properies in the DB
 var getProperties = function() {
   return new Promise(function(resolve, reject) {
@@ -26,6 +24,20 @@ var getPropertyById = function(propertyUserId) {
       .then(function(property) {
         console.log("Properties controller, props = ", property)
         resolve(property);
+      })
+      .catch(function(err) {
+        reject(err);
+      });
+  });
+};
+
+var getImagesByPropId = function(propertyUserId) {
+  console.log("in getImages")
+  return new Promise(function(resolve, reject) {
+    db.Property.findOne({id: propertyUserId}).select('images').exec()
+      .then(function(data) {
+        console.log("Properties controller, images = ", data.images)
+        resolve(data.images);
       })
       .catch(function(err) {
         reject(err);
@@ -65,5 +77,6 @@ var getPropertiesWithFilter = function(filters) {
 module.exports = {
   getProperties: getProperties,
   getPropertiesWithFilter: getPropertiesWithFilter,
-  getPropertyById: getPropertyById
+  getPropertyById: getPropertyById,
+  getImagesByPropId: getImagesByPropId
 };

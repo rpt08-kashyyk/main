@@ -7,7 +7,7 @@ import $ from 'jquery';
 //import examplePropertyData from '../dist/propertyData.js'
 
 import FirebnbHeader from './components/header.jsx';
-import Jumbo from './components/jumbo.jsx';
+//import Jumbo from './components/jumbo.jsx';
 import Property from './components/property.jsx';
 import PropertyDesc from './components/propertyDesc.jsx';
 import Amenities from './components/amenities.jsx';
@@ -77,7 +77,6 @@ class PropertyMain extends React.Component {
 
 
   getAmenities() {
-    //console.log("in get amenities");
     let serverRoute = '/api/amenitites';
     $.get(serverRoute, data => {
       //console.log("Amenitiesdata: ", data)
@@ -100,8 +99,8 @@ class PropertyMain extends React.Component {
 
 
   componentWillReceiveProps(props) {
-    console.log("!!!!!!!!!!in propertyMain, will receive props", props.propertyId);
     const prevPropId = this.props.propertyId;
+
     if (props.propertyId !== prevPropId) {
       this.getPropertyDetails(props.propertyId)
     }
@@ -113,10 +112,13 @@ class PropertyMain extends React.Component {
         border: 'none',
         color: 'teal',
         paddingBottom: 20,
-        paddingLeft: 0,
+        paddingLeft: 15,
         margine: 0,
         textAlign: 'left',
-        className: 'infoBtn'
+        className: 'infoBtn',
+        background: 'white',
+        outline: 0,
+        boxShadow: 'none'
       };
 
       console.log("render: currentProperty", this.state.currentProperty)
@@ -130,28 +132,21 @@ class PropertyMain extends React.Component {
 
         )
       return (
-        <div>
-            <Jumbo currentProp={this.state.currentProperty} />
-            <Property property={this.state.currentProperty}/>
-            <Grid>
-              <Row className="show-grid">
-                <Col md={7}>
-                  {this.state.showDesc && <PropertyDesc currentProperty={this.state.currentProperty} />}
+            <div>
+              <Property property={this.state.currentProperty}/>
+              <div>
+                {this.state.showDesc && <PropertyDesc currentProperty={this.state.currentProperty} />}
                   <Button bsSize="large" onClick = {this.toggleDescDisplay} style={buttonStyle}>{this.state.showBtnLabel}</Button>
-                </Col>
-              </Row>
-              <Row className="show-grid">
-                <Col md={7}>
+              </div>
+              <div>
                   <Button bsSize="large" style={buttonStyle}>Contact Host</Button>
-                </Col>
-              </Row>
+               </div>
               <Row>
                 <Col md={7}>
                   <Amenities currentProp={this.state.currentProperty}/>
                   <Button bsSize="large" onClick = {this.showAmenitiesModal} style={buttonStyle}>Show all amenities</Button>
                 </Col>
               </Row>
-            </Grid>
           </div>
         )
   }

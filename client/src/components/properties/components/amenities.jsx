@@ -2,11 +2,26 @@ import React from 'react';
 import { ListGroup, Grid, Row, Col, Table, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
+const headerStyle = {
+  position: 'relative',
+  left: '15px',
+  text: 'strong',
+  fontWeight:'bold',
+  sontSize: 25
+};
+
+const tableStyle = {
+  position: 'relative',
+  left: '15px'
+};
+
 var Amenities = (props) => (
 
   <div>
-    <h3 className="font-weight-bold">Amenities</h3>
-    <Table responsive>
+    <div>
+      <h3 style={headerStyle}>Amenities</h3>
+    </div>
+    <Table style={tableStyle} responsive>
      <tbody>
         <tr>
           <td><span className="glyphicon glyphicon-home" aria-hidden="true"></span> Free parking on premises</td>

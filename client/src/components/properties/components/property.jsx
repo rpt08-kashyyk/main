@@ -18,46 +18,48 @@ class Property extends React.Component {
       <Grid>
         <Row className="show-grid">
           <Col md={7}>
-            <h3>
-              <strong>ENTIRE HOUSE</strong>
-            </h3>
             <div>
-              <h1 style={{ padding: 0, marginBottom: 20, width: 600}}>
-                {this.props.property.shortDesc}
-              </h1>
+                <h3>
+                  <strong>ENTIRE HOUSE</strong>
+                </h3>
+                <div>
+                  <h1 style={{ padding: 0, marginBottom: 20, width: 600}}>
+                    {this.props.property.shortDesc}
+                  </h1>
+                </div>
+                <div>
+                  <h3 style={{ padding: 0, marginBottom: 20, width: 600}}>
+                    {this.props.property.address.city}
+                  </h3>
+                </div>
+                <div style={{ padding: 5, marginBottom: 20, width: 600}}>
+                  <Row className="show-grid">
+                    <Col md={2}>
+                      <p>
+                        {this.props.property.guests} guests
+                      </p>
+                   </Col>
+                   <Col md={3}>
+                      <p>
+                        {this.props.property.bedrooms} bedrooms
+                      </p>
+                   </Col>
+                   <Col md={2}>
+                      <p>
+                        {this.props.property.beds} beds
+                      </p>
+                   </Col>
+                   <Col md={2}>
+                      <p>
+                        {this.props.property.beds} baths
+                      </p>
+                 </Col>
+                </Row>
+              </div>
+              <p className="prop-desc">
+                {this.props.property.desc1}
+              </p>
             </div>
-            <div>
-              <h3 style={{ padding: 0, marginBottom: 20, width: 600}}>
-                {this.props.property.address.city}
-              </h3>
-            </div>
-            <div style={{ padding: 5, marginBottom: 20, width: 600}}>
-              <Row className="show-grid">
-                <Col md={2}>
-                  <p>
-                    {this.props.property.guests} guests
-                  </p>
-               </Col>
-               <Col md={3}>
-                  <p>
-                    {this.props.property.bedrooms} bedrooms
-                  </p>
-               </Col>
-               <Col md={2}>
-                  <p>
-                    {this.props.property.beds} beds
-                  </p>
-               </Col>
-               <Col md={2}>
-                  <p>
-                    {this.props.property.beds} baths
-                  </p>
-               </Col>
-              </Row>
-            </div>
-            <p className="prop-desc">
-              {this.props.property.desc1}
-            </p>
           </Col>
           <Col md={5}>
             Placeholder for Calendar
