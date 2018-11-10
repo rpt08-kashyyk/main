@@ -13,9 +13,30 @@ app.route('/api/properties/:propertyId')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var properties = [];
-    console.log("propertyId = ", servicePropId);
     request({
       url: 'http://localhost:3001/api/properties/' + servicePropId,
+      method: 'GET',
+      qs: {
+        limit: 1
+      }
+    }, function(err, res, body) {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log("Got results from 3001");
+        properties = JSON.parse(body);
+        console.log("in request, properties:", properties);
+        result.send(properties);
+      }
+  });
+});
+
+app.route('/api/properties/:propertyId/images')
+  .get(function(req, result, next) {
+    let servicePropId = req.params.propertyId;
+    var images = [];
+    request({
+      url: 'http://localhost:3001/api/properties/' + servicePropId + '/images',
       method: 'GET',
       qs: {
         limit: 1

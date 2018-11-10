@@ -26,6 +26,19 @@ app.route('/api/properties/:propertyId')
     })
 });
 
+app.route('/api/properties/:propertyId/images')
+  .get(function(req, res) {
+    var propId = req.params.propertyId;
+    propDB.getImagesByPropId( propId )
+    .then(function(images){
+      res.send(images);
+    })
+    .catch(function(err){
+      console.log("Got to the images service!")
+      res.status(400);
+    })
+});
+
 app.route('/api/amenities')
   .get(function(req, res) {
     propDB.getPropertyById( propId )
