@@ -5,11 +5,12 @@ const request = require('request');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.route('/api/properties/:propertyId')
+
+app.route('/api/properties/property/:propertyId')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var properties = [];
@@ -31,7 +32,7 @@ app.route('/api/properties/:propertyId')
   });
 });
 
-app.route('/api/properties/:propertyId/images')
+app.route('/api/properties/property/:propertyId/images')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var images = [];
@@ -61,6 +62,10 @@ app.route('api/reviews/:propertyId')
 app.route('api/calendar/:propertyId')
   .get(function(req, result, next) {
     console.log("calendar");
+});
+
+app.get('*', function(req, res) {
+    res.redirect('/');
 });
 
 app.listen(2000, function() {

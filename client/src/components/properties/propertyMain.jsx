@@ -7,7 +7,6 @@ import $ from 'jquery';
 //import examplePropertyData from '../dist/propertyData.js'
 
 import FirebnbHeader from './components/header.jsx';
-//import Jumbo from './components/jumbo.jsx';
 import Property from './components/property.jsx';
 import PropertyDesc from './components/propertyDesc.jsx';
 import Amenities from './components/amenities.jsx';
@@ -64,8 +63,7 @@ class PropertyMain extends React.Component {
   }
 
   getPropertyDetails(newPropId) {
-    console.log("in get properties details: ", newPropId);
-    let serverRoute = '/api/properties/' + newPropId;
+    let serverRoute = '/api/properties/property/' + newPropId;
     $.get(serverRoute, data => {
       console.log("Get properties data: ", data)
       this.setState({
