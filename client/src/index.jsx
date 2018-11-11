@@ -6,7 +6,8 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import PropertyMain from './components/properties/propertyMain.jsx';
 import ImagesGrid from './components/properties/imagesMain.jsx';
-import FirebnbHeader from './components/header.jsx'
+import FirebnbHeader from './components/header.jsx';
+import Reviews from './components/reviews/reviews.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ class App extends React.Component {
                     </Row>
                     <Row>
                       <Col md={8}>
-                        <h3>Here will be reviews</h3>
+                        <Reviews propertyId={props.match.params.prop_id}/>
                       </Col>
                     </Row>
                   </Grid>
