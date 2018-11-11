@@ -54,9 +54,28 @@ app.route('/api/properties/property/:propertyId/images')
   });
 });
 
-app.route('api/reviews/:propertyId')
+// app.route('api/reviews/:propertyId')
+//   .get(function(req, result, next) {
+//     console.log("reviews");
+// });
+
+app.route('/api/reviews/:propertyId')
   .get(function(req, result, next) {
-    console.log("reviews");
+    var review = [];
+    request({
+      url: 'http://localhost:3002/data/' + req.params.propertyId,
+      method: 'GET',
+      qs: {
+        limit: 1
+      }
+    }, function(err, res, data) {
+      if (err) {
+        console.log(err);
+      } else {
+        review = JSON.parse(data);
+        result.send(review);
+      }
+  });
 });
 
 app.route('api/calendar/:propertyId')

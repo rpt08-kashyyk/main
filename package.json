@@ -9,9 +9,10 @@
     "react-dev": "webpack -d --watch",
     "server-dev": "nodemon proxyServer/index.js",
     "service-props": "nodemon services/propertiesServer/server.js",
+    "reviews": "nodemon services/reviewsServer/server.js",
     "db": "mongod",
     "start": "nodemon proxyServer/index.js",
-    "dev": "concurrently --kill-others \"npm run react-dev\" \"npm run service-props\" \"npm run server-dev\"",
+    "dev": "concurrently --kill-others \"npm run react-dev\" \"npm run service-props\" \"npm run server-dev\" \"npm run reviews\"",
     "test": "mocha"
   },
   "author": "Beth Johnson",
