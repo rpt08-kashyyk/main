@@ -17,22 +17,22 @@ class Property extends React.Component {
       return (
       <Grid>
         <Row className="show-grid">
-          <Col md={7}>
+          <Col md={8}>
             <div>
                 <h3>
                   <strong>ENTIRE HOUSE</strong>
                 </h3>
                 <div>
-                  <h1 style={{ padding: 0, marginBottom: 20, width: 600}}>
+                  <h1 style={{ padding: 0, marginBottom: 20, minWidth: 500, maxWidth: 600}}>
                     {this.props.property.shortDesc}
                   </h1>
                 </div>
                 <div>
-                  <h3 style={{ padding: 0, marginBottom: 20, width: 600}}>
+                  <h3 style={{ padding: 0, marginBottom: 20, minWidth: 500, maxWidth: 600}}>
                     {this.props.property.address.city}
                   </h3>
                 </div>
-                <div style={{ padding: 5, marginBottom: 20, width: 600}}>
+                <div style={{ padding: 5, marginBottom: 20, minWidth: 500, maxWidth: 600}}>
                   <Row className="show-grid">
                     <Col md={2}>
                       <p>
@@ -61,9 +61,6 @@ class Property extends React.Component {
               </p>
             </div>
           </Col>
-          <Col md={5}>
-            Placeholder for Calendar
-          </Col>
         </Row>
       </Grid>
       )
@@ -76,20 +73,3 @@ class Property extends React.Component {
 
 
 export default Property;
-
-// <Panel id="collapsible-panel-example-2" defaultCollapsed>
-//                <Panel.Heading>
-//                  <Panel.Title toggle>
-//                    Read more
-//                  </Panel.Title>
-//                </Panel.Heading>
-//                <Panel.Collapse>
-//                  <Panel.Body>
-//                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-//                    accusamus terry richardson ad squid. Nihil anim keffiyeh
-//                    helvetica, craft beer labore wes anderson cred nesciunt sapiente
-//                    ea proident.
-//                  </Panel.Body>
-//                </Panel.Collapse>
-//               </Panel>
-

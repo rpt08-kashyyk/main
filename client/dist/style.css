@@ -69,6 +69,11 @@ body {
   align-items: center;
 }
 
+
+.list-group-item-heading {
+  text-decoration: line-through
+}
+
 #basic-nav-dropdown {
   color: #f12468;
   border-radius: 2px;

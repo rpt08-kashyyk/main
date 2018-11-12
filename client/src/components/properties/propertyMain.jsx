@@ -6,7 +6,6 @@ import { Navbar } from 'react-bootstrap';
 import $ from 'jquery';
 //import examplePropertyData from '../dist/propertyData.js'
 
-import FirebnbHeader from './components/header.jsx';
 import Property from './components/property.jsx';
 import PropertyDesc from './components/propertyDesc.jsx';
 import Amenities from './components/amenities.jsx';
@@ -107,7 +106,6 @@ class PropertyMain extends React.Component {
 
   render() {
      const buttonStyle = {
-
         border: 'none',
         color: 'teal',
         paddingBottom: 20,
@@ -155,10 +153,6 @@ class PropertyMain extends React.Component {
 }
 
 export default PropertyMain;
-
-//     <FirebnbHeader properties={this.state.properties} setCurrentProperty={this.setCurrentProperty}/>
-
-
 
    // return (
    //    <div>

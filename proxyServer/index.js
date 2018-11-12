@@ -9,6 +9,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
+app.route('/api/amenities')
+  .get(function(req, result, next) {
+    let servicePropId = req.params.propertyId;
+    var properties = [];
+    request({
+      url: 'http://localhost:3001/api/amenities/',
+      method: 'GET'
+    }, function(err, res, body) {
+      if (err) {
+        console.error(err);
+      } else {
+        amenities = JSON.parse(body);
+        console.log("in request, amenities:", amenities);
+        result.send(amenities);
+      }
+  });
+});
 
 app.route('/api/properties/property/:propertyId')
   .get(function(req, result, next) {
