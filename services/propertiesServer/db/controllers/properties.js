@@ -45,18 +45,6 @@ var getImagesByPropId = function(propertyUserId) {
   });
 };
 
-getAmenities = function () {
-  return new Promise(function(resolve,reject){
-    db.Amenities.find().exec()
-     .then(function(amenities) {
-        console.log("Properties controller, amenities = ", amenities)
-        resolve(amenities);
-      })
-      .catch(function(err) {
-        reject(err);
-      });
-  })
-}
 //get properties with filters
 var getPropertiesWithFilter = function(filters) {
   //TODO: parse filters
@@ -73,7 +61,6 @@ var getPropertiesWithFilter = function(filters) {
   // });
 };
 
-// Get the itinerary that corresponds to a particular id
 module.exports = {
   getProperties: getProperties,
   getPropertiesWithFilter: getPropertiesWithFilter,

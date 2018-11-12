@@ -14,10 +14,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -52,10 +49,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -90,10 +84,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -128,10 +119,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -166,10 +154,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -204,10 +189,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -242,10 +224,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -280,10 +259,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -318,10 +294,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -356,10 +329,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -394,10 +364,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -432,10 +399,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -470,10 +434,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -508,10 +469,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -546,10 +504,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -584,10 +539,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -622,10 +574,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -660,10 +609,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -698,10 +644,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -736,10 +679,7 @@ module.exports.properties = [
    "beds": 2,
    "bedrooms": 1,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -774,10 +714,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -812,10 +749,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -850,10 +784,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -888,10 +819,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -926,10 +854,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -964,10 +889,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1002,10 +924,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1040,10 +959,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1078,10 +994,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1116,10 +1029,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1154,10 +1064,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1192,10 +1099,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1230,10 +1134,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1268,10 +1169,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1306,10 +1204,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1344,10 +1239,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1382,10 +1274,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1420,10 +1309,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1458,10 +1344,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1496,10 +1379,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1534,10 +1414,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1572,10 +1449,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1610,10 +1484,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1648,10 +1519,7 @@ module.exports.properties = [
    "beds": 2,
    "bedrooms": 1,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1686,10 +1554,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1724,10 +1589,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1762,10 +1624,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1800,10 +1659,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1838,10 +1694,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1876,10 +1729,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1914,10 +1764,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1952,10 +1799,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -1990,10 +1834,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2028,10 +1869,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2066,10 +1904,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2104,10 +1939,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2142,10 +1974,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2180,10 +2009,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2218,10 +2044,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2256,10 +2079,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2294,10 +2114,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2332,10 +2149,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2370,10 +2184,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2408,10 +2219,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2446,10 +2254,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2484,10 +2289,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2522,10 +2324,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2560,10 +2359,7 @@ module.exports.properties = [
    "beds": 2,
    "bedrooms": 1,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2598,10 +2394,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2636,10 +2429,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2674,10 +2464,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2712,10 +2499,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2750,10 +2534,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2788,10 +2569,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2826,10 +2604,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2864,10 +2639,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2902,10 +2674,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2940,10 +2709,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -2978,10 +2744,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3016,10 +2779,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3054,10 +2814,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3092,10 +2849,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3130,10 +2884,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3168,10 +2919,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3206,10 +2954,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3244,10 +2989,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3282,10 +3024,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3320,10 +3059,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3358,10 +3094,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3396,10 +3129,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3434,10 +3164,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3472,10 +3199,7 @@ module.exports.properties = [
    "beds": 2,
    "bedrooms": 1,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3510,10 +3234,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3548,10 +3269,7 @@ module.exports.properties = [
    "beds": 4,
    "bedrooms": 3,
    "baths": 2,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3586,10 +3304,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3624,10 +3339,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3662,10 +3374,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3700,10 +3409,7 @@ module.exports.properties = [
    "beds": 6,
    "bedrooms": 5,
    "baths": 4,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3738,10 +3444,7 @@ module.exports.properties = [
    "beds": 3,
    "bedrooms": 2,
    "baths": 1,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {
@@ -3776,10 +3479,7 @@ module.exports.properties = [
    "beds": 5,
    "bedrooms": 4,
    "baths": 3,
-   "amenities": [{"basic": []},
-               {"facilities": []},
-               {"dining": []}, {"kitchen": []}
-             ],
+   "amenities": [],
    "host": "",
    "images": [
       {

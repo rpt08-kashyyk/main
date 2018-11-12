@@ -65,10 +65,7 @@ var propertySchema = new Schema (
   bedrooms: {type: Number, required: true},
   baths: {type: Number, required: true},
  // calendar: { type: Schema.Types.ObjectId, ref: 'Calendar'},
-  amenitiesBasic: [{type: Schema.Types.ObjectId, ref: 'Amenities'}],
-  amenitiesFacilities: [{type: Schema.Types.ObjectId, ref: 'Amenities'}],
-  amenitiesDining: [{type: Schema.Types.ObjectId, ref: 'Amenities'}],
-  amenitiesKitchen: [{type: Schema.Types.ObjectId, ref: 'Amenities'}],
+  amenities: [{type: Schema.Types.ObjectId, ref: 'Amenities'}],
 
   images: [{
     link: {type: String, required: true}
