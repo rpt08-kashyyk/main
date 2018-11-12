@@ -78,18 +78,18 @@ class AmenitiesModal extends React.Component {
               notIncludedGroupItems.push(
                 <ListGroupItem key={i} style={{borderLeft: 'none', borderRight: 'none', padding: 15}}>
                     <div>
-                        <h4 style={{fontSize: 18}}>{amenity.desc}</h4>
+                        <h4 style={{fontSize: 18, textDecoration: 'line-through'}}>{amenity.desc}</h4>
                         <h5>{amenity.additional}</h5>
                     </div>
                 </ListGroupItem>)
             }
         }
       });
-      cats.push(<ListGroup style={{fontWeight: 700, fontSize: 20, paddingBottom: 15}}>{cat}
+      cats.push(<ListGroup style={{fontWeight: 700, fontSize: 20, border: 'none'}}>{cat}
           {groupItems}
         </ListGroup>);
     });
-      cats.push(<ListGroup style={{fontWeight: 700, fontSize: 20, paddingBottom: 15}}>{'not included'}
+      cats.push(<ListGroup style={{fontWeight: 700, fontSize: 20, border: 'none'}}>{'not included'}
             {notIncludedGroupItems}
           </ListGroup>);
 
@@ -105,7 +105,7 @@ class AmenitiesModal extends React.Component {
           <div>
             <Modal show={this.state.show} onHide={this.handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title style={{fontWeight: 700}}>Amenities</Modal.Title>
+                <Modal.Title style={{fontSize: 24, fontWeight: 700}}>Amenities</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 {this.categoryAmenitiesDisplay()}
