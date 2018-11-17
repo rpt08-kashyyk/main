@@ -115,7 +115,8 @@ app.route('api/calendar/:propertyId')
 });
 
 app.get('*', function(req, res) {
-    res.redirect('/');
+    console.log("req.url=", req.url)
+    res.redirect(req.url);
 });
 
 app.listen(2000, function() {
