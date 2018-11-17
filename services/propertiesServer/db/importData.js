@@ -49,67 +49,18 @@ var importProperties = function(properties) {
   return new Promise.all(saves);
 };
 
-///////////
-var saveItinIdsToUser = function(itinIds, userId) {
-  return new Promise(function(resolve, reject) {
-    db.User.findById(userId, function(err, user) {
-      if (err) {
-        reject(err);
-      }
-      user.set({ itineraries: itinIds });
-      user.save(function(err) {
-        if (err) {
-          reject(err);
-        }
-        resolve(true);
-      });
-    });
-  });
-};
-
-///////////
-
 
 var saveAmenitiesToProperties = function() {
   return new Promise(function (resolve, reject) {
     db.Property.find().cursor()
       .on('data', function(prop) {
         db.Amenities.find({
-    'id': { $in: [1, 2, 3, 4, 5, 6, 7, 8, 9]}}, function(err, entries){
+    'id': { $in: [1, 2, 3, 5, 6, 7, 8, 9, 11, 12, 13, 15, 17, 18, 19, 20, 22]}}, function(err, entries){
             var _ids = [];
 
             entries.forEach(function(entry) {_ids.push(entry._id)});
-            console.log("_ids", _ids);
-            prop.set({ amenitiesBasic: _ids});
-            prop.save(function(err) {
-            if (err) {
-              reject(err);
-            }
-            resolve(true);
-            });
-        });
-
-        db.Amenities.find({
-    'id': { $in: [12, 13, 14, 22, 23]}}, function(err, entries){
-            var _ids = [];
-
-            entries.forEach(function(entry) {_ids.push(entry._id)});
-            console.log("_ids", _ids);
-            prop.set({ amenitiesFacilities: _ids});
-            prop.save(function(err) {
-            if (err) {
-              reject(err);
-            }
-            resolve(true);
-            });
-        });
-
-            db.Amenities.find({'id': { $in: [15, 16, 17, 18, 19]}}, function(err, entries){
-            var _ids = [];
-
-            entries.forEach(function(entry) {_ids.push(entry._id)});
-            console.log("_ids", _ids);
-            prop.set({ amenitiesKitchen: _ids});
+            //console.log("_ids", _ids);
+            prop.set({ amenities: _ids});
             prop.save(function(err) {
             if (err) {
               reject(err);

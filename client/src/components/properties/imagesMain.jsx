@@ -22,7 +22,7 @@ class ImagesGrid extends React.Component {
 
   getImages(newPropId) {
     console.log("in get properties details: ", newPropId);
-    let serverRoute = '/api/properties/' + newPropId + '/images';
+    let serverRoute = '/api/properties/property/' + newPropId + '/images';
     $.get(serverRoute, data => {
       console.log("images data: ", data)
       this.setState({

@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const propDB = require('./db/controllers/properties.js');
+const amenitiesDB = require('./db/controllers/amenities.js');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -21,7 +22,6 @@ app.route('/api/properties/:propertyId')
       res.send(property);
     })
     .catch(function(err){
-      console.log("Got to the Properties service!")
       res.status(400);
     })
 });
@@ -34,19 +34,18 @@ app.route('/api/properties/:propertyId/images')
       res.send(images);
     })
     .catch(function(err){
-      console.log("Got to the images service!")
       res.status(400);
     })
 });
 
 app.route('/api/amenities')
   .get(function(req, res) {
-    propDB.getPropertyById( propId )
-    .then(function(property){
-      res.send(property);
+    amenitiesDB.getAmenities()
+    .then(function(amenities){
+      res.send(amenities);
     })
     .catch(function(err){
-      console.log("Got to the Properties service!")
+      console.log("Couldn't fetch amenities from DB")
       res.status(400);
     })
 });

@@ -5,11 +5,29 @@ const request = require('request');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-app.route('/api/properties/:propertyId')
+app.route('/api/amenities')
+  .get(function(req, result, next) {
+    let servicePropId = req.params.propertyId;
+    var properties = [];
+    request({
+      url: 'http://localhost:3001/api/amenities/',
+      method: 'GET'
+    }, function(err, res, body) {
+      if (err) {
+        console.error(err);
+      } else {
+        amenities = JSON.parse(body);
+        console.log("in request, amenities:", amenities);
+        result.send(amenities);
+      }
+  });
+});
+
+app.route('/api/properties/property/:propertyId')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var properties = [];
@@ -31,7 +49,7 @@ app.route('/api/properties/:propertyId')
   });
 });
 
-app.route('/api/properties/:propertyId/images')
+app.route('/api/properties/property/:propertyId/images')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var images = [];
@@ -61,6 +79,10 @@ app.route('api/reviews/:propertyId')
 app.route('api/calendar/:propertyId')
   .get(function(req, result, next) {
     console.log("calendar");
+});
+
+app.get('*', function(req, res) {
+    res.redirect('/');
 });
 
 app.listen(2000, function() {

@@ -6,11 +6,10 @@ import { Navbar } from 'react-bootstrap';
 import $ from 'jquery';
 //import examplePropertyData from '../dist/propertyData.js'
 
-import FirebnbHeader from './components/header.jsx';
-//import Jumbo from './components/jumbo.jsx';
 import Property from './components/property.jsx';
 import PropertyDesc from './components/propertyDesc.jsx';
 import Amenities from './components/amenities.jsx';
+import AmenitiesModal from './components/amenitiesModal.jsx';
 
 class PropertyMain extends React.Component {
   constructor(props) {
@@ -64,8 +63,7 @@ class PropertyMain extends React.Component {
   }
 
   getPropertyDetails(newPropId) {
-    console.log("in get properties details: ", newPropId);
-    let serverRoute = '/api/properties/' + newPropId;
+    let serverRoute = '/api/properties/property/' + newPropId;
     $.get(serverRoute, data => {
       console.log("Get properties data: ", data)
       this.setState({
@@ -108,7 +106,6 @@ class PropertyMain extends React.Component {
 
   render() {
      const buttonStyle = {
-
         border: 'none',
         color: 'teal',
         paddingBottom: 20,
@@ -142,21 +139,20 @@ class PropertyMain extends React.Component {
                   <Button bsSize="large" style={buttonStyle}>Contact Host</Button>
                </div>
               <Row>
-                <Col md={7}>
+                <Col md={11}>
                   <Amenities currentProp={this.state.currentProperty}/>
                   <Button bsSize="large" onClick = {this.showAmenitiesModal} style={buttonStyle}>Show all amenities</Button>
                 </Col>
               </Row>
+              <div>
+                {this.state.showAmenitiesModal && <AmenitiesModal hideAmenities={this.handleAmenitiesClose} currentProperty={this.state.currentProperty} />}
+              </div>
           </div>
         )
   }
 }
 
 export default PropertyMain;
-
-//     <FirebnbHeader properties={this.state.properties} setCurrentProperty={this.setCurrentProperty}/>
-
-
 
    // return (
    //    <div>
