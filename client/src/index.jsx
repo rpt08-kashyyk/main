@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 import PropertyMain from './components/properties/propertyMain.jsx';
@@ -32,29 +32,31 @@ class App extends React.Component {
       <Router>
         <div>
           <FirebnbHeader setCurrentProperty={this.setCurrentProperty}/>
-            <Route
-              path="/property/:prop_id"
-              render={ props =>
-                <div>
-                  <ImagesGrid propertyId={props.match.params.prop_id}/>
-                  <Grid>
-                    <Row className="show-grid">
-                      <Col md={8}>
-                        <PropertyMain propertyId={props.match.params.prop_id}/>
-                      </Col>
-                      <Col md={4}>
-                        <Calendar propertyId={props.match.params.prop_id}/>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col md={8}>
-                        <Reviews propertyId={props.match.params.prop_id}/>
-                      </Col>
-                    </Row>
-                  </Grid>
-                </div>
-              }
-            />
+            <Switch>
+              <Route
+                path="/property/:prop_id" exact={true} strict = {true}
+                render={ props =>
+                  <div>
+                    <ImagesGrid propertyId={props.match.params.prop_id}/>
+                    <Grid>
+                      <Row className="show-grid">
+                        <Col md={8}>
+                          <PropertyMain propertyId={props.match.params.prop_id}/>
+                        </Col>
+                        <Col md={4}>
+                          <h3>Here will be calendar</h3>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col md={8}>
+                          <h3>Here will be reviews</h3>
+                        </Col>
+                      </Row>
+                    </Grid>
+                  </div>
+                }
+              />
+            </Switch>
         </div>
       </Router>
     )

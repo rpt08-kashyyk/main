@@ -114,9 +114,17 @@ app.route('api/calendar/:propertyId')
   });
 });
 
-app.get('*', function(req, res) {
-    console.log("req.url=", req.url)
-    res.redirect(req.url);
+// app.get('*', function(req, res) {
+//     console.log("req.url=", req.url)
+//     res.redirect(req.url);
+// });
+
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, '/../client/dist/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
 });
 
 app.listen(2000, function() {
