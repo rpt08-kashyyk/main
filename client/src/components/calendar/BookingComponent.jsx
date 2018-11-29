@@ -25,21 +25,35 @@ class BookingComponent extends React.Component {
       daysReserved: 10
     }
     this.handleBooking = this.handleBooking.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    //this.handleChange = this.handleChange.bind(this);
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: '/api/calendar/' + this.props.propertyId,
+      success: (data) => {
+        this.setState({
+          propertyData: data
+        })
+      },
+      error: (err) => {
+        console.log('err', err);
+      }
+    });
   }
 
   handleBooking(){
    console.log("Data to be saved");
   }
 
-  handleChange(e) {
+  /*handleChange(e) {
     let ctxt = this;
       console.log(e.target.value);
       $.get('/api/'+e.target.value, function(propertyDataFrmDB){
         console.log(propertyDataFrmDB);
         ctxt.setState({propertyData:propertyDataFrmDB[0]});
       })
-  }
+  }*/
 
   render() {
     return (
