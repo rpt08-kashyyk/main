@@ -97,7 +97,21 @@ app.route('/api/reviews/:propertyId')
 
 app.route('api/calendar/:propertyId')
   .get(function(req, result, next) {
-    console.log("calendar");
+   var booking = [];
+    request({
+      url: 'http://localhost:8000/api/calendar' + req.params.propertyId,
+      method: 'GET',
+      qs: {
+        limit: 1
+      }
+    }, function(err, res, data) {
+      if (err) {
+        console.log(err);
+      } else {
+        booking = JSON.parse(data);
+        result.send(booking);
+      }
+  });
 });
 
 app.get('*', function(req, res) {

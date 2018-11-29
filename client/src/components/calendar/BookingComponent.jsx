@@ -69,7 +69,7 @@ class BookingComponent extends React.Component {
         serviceFees = {this.state.propertyData.serviceFees}
         taxesAndFees = {this.state.propertyData.taxesAndFees}
         daysReserved = {this.state.daysReserved}/>
-        <div className="bookingButton" onClick={this.handleBooking}><img src="/images/requestBooking.png"/></div>
+        <div className="bookingButton" onClick={this.handleBooking}><img src="/requestBooking.png"/></div>
       </div>
     );
   }

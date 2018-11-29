@@ -8,6 +8,7 @@ import PropertyMain from './components/properties/propertyMain.jsx';
 import ImagesGrid from './components/properties/imagesMain.jsx';
 import FirebnbHeader from './components/header.jsx';
 import Reviews from './components/reviews/reviews.jsx';
+import Calendar from './components/calendar/BookingComponent.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class App extends React.Component {
                         <PropertyMain propertyId={props.match.params.prop_id}/>
                       </Col>
                       <Col md={4}>
-                        <h3>Here will be calendar</h3>
+                        <Calendar propertyId={props.match.params.prop_id}/>
                       </Col>
                     </Row>
                     <Row>

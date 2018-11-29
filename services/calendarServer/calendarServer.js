@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
  app.use(express.static(__dirname + '/../dist'));
 
- app.get('/api/:propertyID', (req, res) =>{
+ app.get('/api/calendar/:propertyID', (req, res) =>{
   db.findOne((data) => {
     console.log("LOG FROM SERVER : FETCHED DATA FOR ID ", data[0].propertyID);
     res.json(data);

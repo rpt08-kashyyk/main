@@ -251,3 +251,55 @@ h1 {
 .w600 {
   font-weight: 600;
 }
+.bookingComponentArea {
+  height: 375px;
+  width: 312px;
+  border-style: groove
+}
+
+.topRent {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.headings {
+  font-weight: bold;
+  font-size: 12pt;
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.topRentText {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.bottomBorder {
+    border-bottom: 1px groove;
+    width:95%;
+    margin:auto;
+}
+
+.dateBoxMargin {
+  margin-top:10px;
+  margin-left:10px;
+}
+
+.guestBoxMargin {
+  margin-top:10px;
+  margin-left:10px;
+  margin-bottom: 20px;
+}
+
+
+.costBoxMargin {
+  margin-top:40px;
+  margin-left:10px;
+}
+
+.bookingButton {
+  margin-top:30px;
+  margin-left:0px;
+}
+
