@@ -44,23 +44,6 @@ class BookingComponent extends React.Component {
   render() {
     return (
       <div className="bookingComponentArea">
-      <select onChange={this.handleChange}>
-            <option defaultValue>Select Property</option>
-            <option defaultValue>1</option>
-            <option defaultValue>2</option>
-            <option defaultValue>3</option>
-            <option defaultValue>4</option>
-            <option defaultValue>5</option>
-            <option defaultValue>6</option>
-            <option defaultValue>7</option>
-            <option defaultValue>8</option>
-            <option defaultValue>9</option>
-            <option defaultValue>10</option>
-            <option defaultValue>20</option>
-            <option defaultValue>30</option>
-            <option defaultValue>40</option>
-            <option defaultValue>50</option>
-       </select>
         <div className="bottomBorder"><span className="topRent">{'$'+this.state.propertyData.dailyRent} </span><span className="topRentText">per night</span></div>
         <Dates />
         <Guests />
