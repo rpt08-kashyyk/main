@@ -30,7 +30,7 @@ class BookingComponent extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: '/api/calendar/' + this.props.propertyId,
+      url: 'http://localhost:8000/api/calendar/' + this.props.propertyId,
       success: (data) => {
         this.setState({
           propertyData: data

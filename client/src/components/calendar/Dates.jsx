@@ -23,8 +23,7 @@ class Dates extends React.Component {
     return (
       <div>
       <div className="headings">Dates
-      <div className="left-div"><DatePicker selected = {this.state.startDate} onChange={this.handleChange}/></div>
-      <div className="right-div"><DatePicker selected = {this.state.startDate} onChange={this.handleChange}/></div>
+
       </div>
       </div>
     )
