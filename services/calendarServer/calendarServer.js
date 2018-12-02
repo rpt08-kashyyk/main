@@ -21,5 +21,5 @@ app.use(bodyParser.json());
  });
 
 app.listen(8000, function() {
-  console.log('listening on port 8000');
+  console.log('Calendar Service listening on port 8000');
 });
