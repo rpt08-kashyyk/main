@@ -51,6 +51,6 @@ app.get('/comments/:query', function (req, res) {
 // });
 
 app.listen(3002, function() {
-  console.log('listening on port 3002!');
+  console.log('Reviews Service listening on port 3002!');
 });
 

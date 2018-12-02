@@ -20,6 +20,7 @@ class Reviews extends React.Component {
     $.ajax({
       url: '/api/reviews/' + this.props.propertyId,
       success: (data) => {
+        console.log("In Reviews, data = ", data)
         this.setState({
           property: data
         })

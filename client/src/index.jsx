@@ -44,12 +44,13 @@ class App extends React.Component {
                           <PropertyMain propertyId={props.match.params.prop_id}/>
                         </Col>
                         <Col md={4}>
-                          <h3>Here will be calendar</h3>
+                          <Calendar propertyId={props.match.params.prop_id}/>
                         </Col>
                       </Row>
                       <Row>
                         <Col md={8}>
-                          <h3>Here will be reviews</h3>
+                        <h3>In Reviews</h3>
+                          <Reviews propertyId={props.match.params.prop_id}/>
                         </Col>
                       </Row>
                     </Grid>
