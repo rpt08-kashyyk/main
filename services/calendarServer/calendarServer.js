@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
  app.get('/api/calendar/:propertyID', (req, res) =>{
   db.findOne((data) => {
-    console.log("LOG FROM SERVER : FETCHED DATA FOR ID ", data[0].propertyID);
+    //console.log("LOG FROM CALENDAR SERVER : FETCHED DATA FOR ID ", data[0].propertyID);
     res.json(data);
   }, req.params.propertyID);
  });

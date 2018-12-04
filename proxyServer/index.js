@@ -44,7 +44,6 @@ app.route('/api/properties/property/:propertyId')
       } else {
         properties = JSON.parse(body);
         console.log("in property route, received results from property service");
-        result.send(properties);
       }
   });
 });
