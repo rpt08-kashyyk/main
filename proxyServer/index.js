@@ -22,15 +22,7 @@ app.route('/api/amenities')
         console.error(err);
       } else {
         amenities = JSON.parse(body);
-<<<<<<< HEAD
         console.log("in request, amenities");
-=======
-<<<<<<< HEAD
-        //console.log("in request, amenities:", amenities);
-=======
-        console.log("in request, amenities");
->>>>>>> added / to calendar route
->>>>>>> .env
         result.send(amenities);
       }
   });
