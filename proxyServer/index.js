@@ -95,11 +95,11 @@ app.route('/api/reviews/:propertyId')
   });
 });
 
-app.route('api/calendar/:propertyId')
+app.route('/api/calendar/:propertyId')
   .get(function(req, result, next) {
    var booking = [];
     request({
-      url: 'http://localhost:8000/api/calendar' + req.params.propertyId,
+      url: 'http://localhost:8000/api/calendar/' + req.params.propertyId,
       method: 'GET',
       qs: {
         limit: 1
