@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const request = require('request');
+const dotenv = require('dotenv').config();
 
 var app = express();
 
@@ -14,14 +15,14 @@ app.route('/api/amenities')
     let servicePropId = req.params.propertyId;
     var properties = [];
     request({
-      url: 'http://localhost:3001/api/amenities/',
+      url: process.env.PROPERTY_SERVICE_URL + '/api/amenities/',
       method: 'GET'
     }, function(err, res, body) {
       if (err) {
         console.error(err);
       } else {
         amenities = JSON.parse(body);
-        //console.log("in request, amenities:", amenities);
+        console.log("in request, amenities");
         result.send(amenities);
       }
   });
@@ -32,7 +33,7 @@ app.route('/api/properties/property/:propertyId')
     let servicePropId = req.params.propertyId;
     var properties = [];
     request({
-      url: 'http://localhost:3001/api/properties/' + servicePropId,
+      url: process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId,
       method: 'GET',
       qs: {
         limit: 1
@@ -41,10 +42,8 @@ app.route('/api/properties/property/:propertyId')
       if (err) {
         console.error(err);
       } else {
-        console.log("Got results from 3001");
         properties = JSON.parse(body);
-        //console.log("in request, properties:", properties);
-        result.send(properties);
+        console.log("in property route, received results from property service");
       }
   });
 });
@@ -53,8 +52,9 @@ app.route('/api/properties/property/:propertyId/images')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var images = [];
+    console.log("IN GET IMAGES ROUTE!!!", process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId + '/images');
     request({
-      url: 'http://localhost:3001/api/properties/' + servicePropId + '/images',
+      url: process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId + '/images',
       method: 'GET',
       qs: {
         limit: 1
@@ -63,9 +63,8 @@ app.route('/api/properties/property/:propertyId/images')
       if (err) {
         console.error(err);
       } else {
-        console.log("Got results from 3001");
         properties = JSON.parse(body);
-        //console.log("in request, properties:", properties);
+        console.log("in images request, properties:", properties);
         result.send(properties);
       }
   });
@@ -90,6 +89,7 @@ app.route('/api/reviews/:propertyId')
         console.log(err);
       } else {
         review = JSON.parse(data);
+        console.log("in reviews route, booking = ", review)
         result.send(review);
       }
   });
@@ -98,6 +98,7 @@ app.route('/api/reviews/:propertyId')
 app.route('/api/calendar/:propertyId')
   .get(function(req, result, next) {
    var booking = [];
+   console.log("In calendar, req.params: ", req.params)
     request({
       url: 'http://localhost:8000/api/calendar/' + req.params.propertyId,
       method: 'GET',
@@ -109,7 +110,7 @@ app.route('/api/calendar/:propertyId')
         console.log(err);
       } else {
         booking = JSON.parse(data);
-        //console.log("from calendar ", booking);
+        console.log("in calendar route, booking = ", booking)
         result.send(booking);
       }
   });
@@ -121,12 +122,23 @@ app.route('/api/calendar/:propertyId')
 // });
 
 app.get('/*', function(req, res) {
+  console.log("got to *** request, sending file", path.join(__dirname, '/../client/dist/index.html'));
   res.sendFile(path.join(__dirname, '/../client/dist/index.html'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
   })
 });
+
+// app.route('/*')
+// .get(function(req,res,next){
+//   console.log("got to *** request, sending file", path.join(__dirname, '/../client/dist/index.html'));
+//   res.sendFile(path.join(__dirname, '/../client/dist/index.html'), function(err) {
+//     if (err) {
+//       res.status(500).send(err)
+//     }
+//   })
+// });
 
 app.listen(2000, function() {
   console.log('listening on port 2000!');
