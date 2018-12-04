@@ -22,7 +22,15 @@ app.route('/api/amenities')
         console.error(err);
       } else {
         amenities = JSON.parse(body);
+<<<<<<< HEAD
         console.log("in request, amenities");
+=======
+<<<<<<< HEAD
+        //console.log("in request, amenities:", amenities);
+=======
+        console.log("in request, amenities");
+>>>>>>> added / to calendar route
+>>>>>>> .env
         result.send(amenities);
       }
   });
@@ -44,6 +52,7 @@ app.route('/api/properties/property/:propertyId')
       } else {
         properties = JSON.parse(body);
         console.log("in property route, received results from property service");
+        result.send(properties);
       }
   });
 });
@@ -64,7 +73,7 @@ app.route('/api/properties/property/:propertyId/images')
         console.error(err);
       } else {
         properties = JSON.parse(body);
-        console.log("in images request, properties:", properties);
+        console.log("in images request", );
         result.send(properties);
       }
   });
