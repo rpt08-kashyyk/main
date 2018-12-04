@@ -21,7 +21,7 @@ app.route('/api/amenities')
         console.error(err);
       } else {
         amenities = JSON.parse(body);
-        console.log("in request, amenities:", amenities);
+        console.log("in request, amenities");
         result.send(amenities);
       }
   });
@@ -41,9 +41,8 @@ app.route('/api/properties/property/:propertyId')
       if (err) {
         console.error(err);
       } else {
-        console.log("Got results from 3001");
         properties = JSON.parse(body);
-        console.log("in request, properties:", properties);
+        console.log("in property route, received results from property service");
         result.send(properties);
       }
   });
@@ -53,6 +52,7 @@ app.route('/api/properties/property/:propertyId/images')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var images = [];
+    console.log("IN GET IMAGES ROUTE!!!");
     request({
       url: 'http://localhost:3001/api/properties/' + servicePropId + '/images',
       method: 'GET',
@@ -63,9 +63,8 @@ app.route('/api/properties/property/:propertyId/images')
       if (err) {
         console.error(err);
       } else {
-        console.log("Got results from 3001");
         properties = JSON.parse(body);
-        console.log("in request, properties:", properties);
+        console.log("in images request, properties:", properties);
         result.send(properties);
       }
   });
@@ -90,6 +89,7 @@ app.route('/api/reviews/:propertyId')
         console.log(err);
       } else {
         review = JSON.parse(data);
+        console.log("in reviews route, booking = ", review)
         result.send(review);
       }
   });
@@ -98,6 +98,7 @@ app.route('/api/reviews/:propertyId')
 app.route('/api/calendar/:propertyId')
   .get(function(req, result, next) {
    var booking = [];
+   console.log("In calendar, req.params: ", req.params)
     request({
       url: 'http://localhost:8000/api/calendar/' + req.params.propertyId,
       method: 'GET',
@@ -109,6 +110,7 @@ app.route('/api/calendar/:propertyId')
         console.log(err);
       } else {
         booking = JSON.parse(data);
+        console.log("in calendar route, booking = ", booking)
         result.send(booking);
       }
   });
@@ -120,12 +122,23 @@ app.route('/api/calendar/:propertyId')
 // });
 
 app.get('/*', function(req, res) {
+  console.log("got to *** request, sending file", path.join(__dirname, '/../client/dist/index.html'));
   res.sendFile(path.join(__dirname, '/../client/dist/index.html'), function(err) {
     if (err) {
       res.status(500).send(err)
     }
   })
 });
+
+// app.route('/*')
+// .get(function(req,res,next){
+//   console.log("got to *** request, sending file", path.join(__dirname, '/../client/dist/index.html'));
+//   res.sendFile(path.join(__dirname, '/../client/dist/index.html'), function(err) {
+//     if (err) {
+//       res.status(500).send(err)
+//     }
+//   })
+// });
 
 app.listen(2000, function() {
   console.log('listening on port 2000!');
