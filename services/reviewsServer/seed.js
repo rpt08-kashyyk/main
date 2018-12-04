@@ -1,6 +1,6 @@
 var data = require('./seed_data.js');
 var mongoose = require('mongoose');
-var db = require('./database-mongo/index.js');
+var db = require('./index.js');
 
 mongoose.connect('mongodb://localhost/fec');
 
