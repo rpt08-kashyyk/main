@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const request = require('request');
+const dotenv = require('dotenv').config();
 
 var app = express();
 
@@ -14,7 +15,7 @@ app.route('/api/amenities')
     let servicePropId = req.params.propertyId;
     var properties = [];
     request({
-      url: 'http://localhost:3001/api/amenities/',
+      url: process.env.PROPERTY_SERVICE_URL + '/api/amenities/',
       method: 'GET'
     }, function(err, res, body) {
       if (err) {
@@ -32,7 +33,7 @@ app.route('/api/properties/property/:propertyId')
     let servicePropId = req.params.propertyId;
     var properties = [];
     request({
-      url: 'http://localhost:3001/api/properties/' + servicePropId,
+      url: process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId,
       method: 'GET',
       qs: {
         limit: 1
@@ -52,9 +53,9 @@ app.route('/api/properties/property/:propertyId/images')
   .get(function(req, result, next) {
     let servicePropId = req.params.propertyId;
     var images = [];
-    console.log("IN GET IMAGES ROUTE!!!");
+    console.log("IN GET IMAGES ROUTE!!!", process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId + '/images');
     request({
-      url: 'http://localhost:3001/api/properties/' + servicePropId + '/images',
+      url: process.env.PROPERTY_SERVICE_URL + '/api/properties/' + servicePropId + '/images',
       method: 'GET',
       qs: {
         limit: 1
