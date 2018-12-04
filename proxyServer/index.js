@@ -21,7 +21,7 @@ app.route('/api/amenities')
         console.error(err);
       } else {
         amenities = JSON.parse(body);
-        console.log("in request, amenities:", amenities);
+        //console.log("in request, amenities:", amenities);
         result.send(amenities);
       }
   });
@@ -43,7 +43,7 @@ app.route('/api/properties/property/:propertyId')
       } else {
         console.log("Got results from 3001");
         properties = JSON.parse(body);
-        console.log("in request, properties:", properties);
+        //console.log("in request, properties:", properties);
         result.send(properties);
       }
   });
@@ -65,7 +65,7 @@ app.route('/api/properties/property/:propertyId/images')
       } else {
         console.log("Got results from 3001");
         properties = JSON.parse(body);
-        console.log("in request, properties:", properties);
+        //console.log("in request, properties:", properties);
         result.send(properties);
       }
   });
@@ -109,6 +109,7 @@ app.route('/api/calendar/:propertyId')
         console.log(err);
       } else {
         booking = JSON.parse(data);
+        //console.log("from calendar ", booking);
         result.send(booking);
       }
   });

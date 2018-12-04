@@ -32,8 +32,9 @@ class BookingComponent extends React.Component {
     $.ajax({
       url: '/api/calendar/' + this.props.propertyId,
       success: (data) => {
+        //console.log("from front end booking component",data[0].dailyRent, data);
         this.setState({
-          propertyData: data
+          propertyData: data[0]
         })
       },
       error: (err) => {
