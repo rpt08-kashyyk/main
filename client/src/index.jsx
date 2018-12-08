@@ -49,7 +49,6 @@ class App extends React.Component {
                       </Row>
                       <Row>
                         <Col md={8}>
-                        <h3>In Reviews</h3>
                           <Reviews propertyId={props.match.params.prop_id}/>
                         </Col>
                       </Row>

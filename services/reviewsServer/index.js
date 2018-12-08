@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fec');
+var dotenv = require('dotenv').config();
+
+mongoose.connect(DB_REVIEWS_HOST);
 
 var db = mongoose.connection;
 
