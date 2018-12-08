@@ -2,16 +2,17 @@ var mongoose = require('mongoose');
 var db = require('./index.js');
 var Promise = require('bluebird');
 mongoose.Promise = require('bluebird');
-var dataProperties = require('./propertiesData.js');
+var dataProperties = require('../dataGen/properties.js');
 var dataAmenities = require('./amenitiesData.js');
 
-//mongoose.connect('mongodb://localhost:27017/firebnb');
-//var db = mongoose.connection;
+// mongoose.connect('mongodb://localhost:27017/firebnb');
+// var db = mongoose.connection;
 
-//db.on('error', console.error.bind(console, 'connection error:'));
-//db.once('open', function() {
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
 //  console.log('Mongoose connected!');
-//});
+// });
+
 
 var importAmenities = function(amenities) {
   var saves = [];
@@ -112,6 +113,8 @@ var saveAmenitiesToProperties = function() {
   })
 };
 
+
+setTimeout(function(){ console.log("Hello"); }, 3000);
 
 importAmenities(dataAmenities.amenities)
   .then(function(amenitiesEntry) {

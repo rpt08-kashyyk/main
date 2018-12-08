@@ -3,10 +3,10 @@ var Schema = mongoose.Schema;
 
 require('dotenv').config();
 
-var uri = process.env.DB_PROPERTIES_HOST;
+var uri = process.env.DB_PROPERTIES_HOST || 'mongodb://localhost:27017/firebnb';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-mongoose.connect(uri);
+mongoose.connect(uri, { useNewUrlParser: true });
 
 var db = mongoose.connection;
 
