@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var db = require('./index.js');
 var Promise = require('bluebird');
 mongoose.Promise = require('bluebird');
-var dataProperties = require('../dataGen/properties.js');
+var dataProperties = require('../dataGen/data.js');
 var dataAmenities = require('./amenitiesData.js');
 
 // mongoose.connect('mongodb://localhost:27017/firebnb');
