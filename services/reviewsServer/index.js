@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var dotenv = require('dotenv').config();
 
-mongoose.connect(process.env.DB_REVIEWS_HOST);
+mongoose.connect('mongodb://localhost:27017/fec');
 
 var db = mongoose.connection;
 
