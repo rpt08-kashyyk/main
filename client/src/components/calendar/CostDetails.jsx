@@ -17,15 +17,15 @@ class CostDetails extends React.Component {
           </tr>
           <tr>
             <td align="left">Cleaning fee</td>
-            <td align="right">{'$'+this.props.taxesAndFees}</td>
+            <td align="right">{'$'+Math.round(this.props.taxesAndFees)}</td>
           </tr>
           <tr>
             <td align="left">Service fee</td>
-            <td align="right">{'$'+this.props.serviceFees}</td>
+            <td align="right">{'$'+Math.round(this.props.serviceFees)}</td>
           </tr>
           <tr>
             <td align="left">Occupancy taxes and fees</td>
-            <td align="right">{'$'+this.props.taxesAndFees}</td>
+            <td align="right">{'$'+Math.round(this.props.taxesAndFees)}</td>
           </tr>
           <tr>
             <td align="left">Total</td>
