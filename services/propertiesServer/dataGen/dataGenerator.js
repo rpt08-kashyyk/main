@@ -23,16 +23,17 @@ var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, c
         var stats = fs.statSync(currentOutputFile);
         var fileSizeInMB = stats["size"] / 1000000;
 
-        if (fileSizeInMB >= maxFileSize && newFileFlag) {
+        if (fileSizeInMB >= maxFileSize || newFileFlag) {
           console.log('filesize: ', fileSizeInMB);
           console.log('MAX_FILE_SIZE: ', maxFileSize);
           currentOutputFile = writeTofileName (outputFileName);
+          newFileFlag = false;
           fs.writeFileSync(currentOutputFile, "[");
-
         }
       }
       else {
         currentOutputFile = writeTofileName (outputFileName);
+        newFileFlag = false;
         fs.writeFileSync(currentOutputFile, "[");
       }
 
@@ -54,13 +55,14 @@ var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, c
       });
 
       if ((i === maxIterations && j === dataFile.length-1)
-      //  || (fs.statSync(currentOutputFile).size / 1000000 >= maxFileSize)
+        || (fs.statSync(currentOutputFile).size / 1000000 >= maxFileSize)
       ){
         fs.appendFileSync(currentOutputFile, "]", function (err) {
             if (err) {
                 console.error(err);
                 return;
             };
+            newFileFlag = true;
             console.log("appended ]");
         });
       } else {
