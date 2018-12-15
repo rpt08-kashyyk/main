@@ -4,6 +4,7 @@ import $ from 'jquery';
 import Dates from './Dates.jsx'
 import Guests from './Guests.jsx'
 import CostDetails from './CostDetails.jsx'
+import { Button, DropdownButton,MenuItem} from 'react-bootstrap';
 
 
 class BookingComponent extends React.Component {
@@ -57,17 +58,35 @@ class BookingComponent extends React.Component {
   }*/
 
   render() {
+   const buttonStyle = {
+        border: 'none',
+        color: 'white',
+        paddingBottom: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginLeft: 30,
+        marginRight:20,
+        textAlign: 'center',
+        className: 'infoBtn',
+        background: '#FC5C63',
+        outline: 0,
+        boxShadow: 'none'
+      };
+
+
     return (
       <div className="bookingComponentArea">
         <div className="bottomBorder"><span className="topRent">{'$'+this.state.propertyData.dailyRent} </span><span className="topRentText">per night</span></div>
-        <Dates />
-        <Guests />
-        <CostDetails dailyRent = {this.state.propertyData.dailyRent}
+        <div><Dates /></div>
+        <div><Guests /></div>
+        <div><CostDetails dailyRent = {this.state.propertyData.dailyRent}
         cleaningFees = {this.state.propertyData.cleaningFees}
         serviceFees = {this.state.propertyData.serviceFees}
         taxesAndFees = {this.state.propertyData.taxesAndFees}
-        daysReserved = {this.state.daysReserved}/>
-        <div className="bookingButton" onClick={this.handleBooking}><img src="/requestBooking.png"/></div>
+        daysReserved = {this.state.daysReserved}/></div>
+        <div>
+         <Button bsSize="large" bsStyle="danger"onClick = {this.handleBooking} style={buttonStyle}>Request to book</Button>
+         </div>
       </div>
     );
   }
