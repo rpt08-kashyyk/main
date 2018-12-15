@@ -17,7 +17,7 @@ class CostDetails extends React.Component {
           </tr>
           <tr>
             <td align="left">Cleaning fee</td>
-            <td align="right">{'$'+this.props.cleaningFees}</td>
+            <td align="right">{'$'+this.props.taxesAndFees}</td>
           </tr>
           <tr>
             <td align="left">Service fee</td>
@@ -29,7 +29,7 @@ class CostDetails extends React.Component {
           </tr>
           <tr>
             <td align="left">Total</td>
-            <td align="right">{'$'+parseInt(parseInt(this.props.dailyRent*this.props.daysReserved) + parseInt(this.props.cleaningFees) + parseInt(this.props.serviceFees) + parseInt(this.props.taxesAndFees))}</td>
+            <td align="right">{'$'+parseInt(parseInt(this.props.dailyRent*this.props.daysReserved) + parseInt(this.props.taxesAndFees) + parseInt(this.props.serviceFees) + parseInt(this.props.taxesAndFees))}</td>
           </tr>
           </tbody>
         </table>
