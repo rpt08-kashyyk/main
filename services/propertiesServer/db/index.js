@@ -77,7 +77,7 @@ var favoritesSchema = new Schema (
 {
   id: {type: Number, required: true},
   userId: {type: Number, required: true},
-  location: [{
+  category: [{
     name: {type: Number, required: true},
     properties: [{type: Schema.Types.ObjectId, ref: 'Property'}]
   }]

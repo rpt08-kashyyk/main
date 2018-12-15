@@ -16,10 +16,7 @@ var dataAmenities = require('./../db/amenitiesData.js');
 //const writeBulkMongoDBPromise = util.promisify(writeBulkMongoDB);
 
 var data = require('./data.js');
-CURR_OUTPUT_FILE = dataGenerator.writeTofileName(importData.OUTPUT_FILE_NAME);
-console.log(CURR_OUTPUT_FILE);
-
-
+CURR_OUTPUT_FILE = importData.writeTofileName(importData.OUTPUT_FILE_NAME);
 
 var main = function() {
   importData.importAmenities(dataAmenities.amenities)

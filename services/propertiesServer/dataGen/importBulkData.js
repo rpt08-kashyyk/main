@@ -17,9 +17,9 @@ var dataAmenities = require('../db/amenitiesData.js');
 const readdir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 
-let MAX_FILE_SIZE = 1000000; //GB
+let MAX_FILE_SIZE = 800; //MB
 let OUTPUT_FILE_NAME = 'properties';
-let MAX_ITERATIONS = 25000;
+let MAX_ITERATIONS = 500000;
 let CURR_OUTPUT_FILE = '';
 
 let currId = 1;
@@ -40,16 +40,17 @@ var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, c
         var stats = fs.statSync(currentOutputFile);
         var fileSizeInMB = stats["size"] / 1000000;
 
-        if (fileSizeInMB >= maxFileSize && newFileFlag) {
+        if (fileSizeInMB >= maxFileSize || newFileFlag) {
           console.log('filesize: ', fileSizeInMB);
           console.log('MAX_FILE_SIZE: ', maxFileSize);
           currentOutputFile = writeTofileName (outputFileName);
+          newFileFlag = false;
           fs.writeFileSync(currentOutputFile, "[");
-
         }
       }
       else {
         currentOutputFile = writeTofileName (outputFileName);
+        newFileFlag = false;
         fs.writeFileSync(currentOutputFile, "[");
       }
 
@@ -71,13 +72,14 @@ var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, c
       });
 
       if ((i === maxIterations && j === dataFile.length-1)
-      //  || (fs.statSync(currentOutputFile).size / 1000000 >= maxFileSize)
+        || (fs.statSync(currentOutputFile).size / 1000000 >= maxFileSize)
       ){
         fs.appendFileSync(currentOutputFile, "]", function (err) {
             if (err) {
                 console.error(err);
                 return;
             };
+            newFileFlag = true;
             console.log("appended ]");
         });
       } else {
@@ -94,6 +96,7 @@ var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, c
   }
   cb();
 }
+
 let importAmenities = function(amenities) {
   console.log('importAmenities');
   var saves = [];
@@ -174,7 +177,7 @@ function writeBulkMongoDB() {
   var dataDir = path.join(__dirname, 'jsons');
 
   readdir(dataDir).then(files => {
-    for(var i = 0; i < 20; i++){
+    //for(var i = 0; i < 20; i++){
       files.forEach(file => {
         var filePath = path.join(dataDir, file)
         let command = 'mongoimport -d firebnb -c properties --jsonArray --file ' + filePath;
@@ -187,7 +190,7 @@ function writeBulkMongoDB() {
           console.log('finished loading into MongoDB: ', filePath)
         });
       });
-    }
+    //}
   });
 }
 
