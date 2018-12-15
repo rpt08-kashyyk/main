@@ -1,55 +1,67 @@
-var data = require('./data.js');
 var fs = require('fs');
 var csv = require('csv');
+var main = require('./dataGenMain')
 
 
-// data.forEach((d) => {
-//       const row = []; // a new array for each row of data
-//       row.push(d.state);
-//       row.push(d.capital);
-//       row.push(d.population);
+let currId = 1;
+let newFileFlag = true;
+ //MB // larger than 1.5G >>>> 1536
 
-//       output.push(row.join()); // by default, join() uses a ','
-//     });
 
-//     fs.writeFileSync(filename, output.join(os.EOL));
+var writeTofileName = function (filename) {
+  return ("./jsons/" + filename + new Date().getTime().toString() + ".js")
+};
 
-var currId = 1;
-var maxIterations = 100;
-var outputFileName = "propertiesSample";
+var writeFile = function(dataFile, maxIterations, maxFileSize, outputFileName, cb){
 
-let writeTofileName = function (filename) {
-  return ("./" + filename + new Date().getTime().toString() + ".js")
-}
-
-let writeFile = function(dataFile, currId, maxIterations, outout){
-
+  var currentOutputFile = "";
+  console.log("dataFile lenght: ", dataFile.length);
   for (let i=0; i <= maxIterations; i++){
-    //console.log("length: ", dataFile.properties.length);
-    for (var j = 0; j < dataFile.properties.length; j++){
-      dataFile.properties[j].id = currId;
-      //console.log("id = ", dataFile.properties[j].id);
+    for (var j = 0; j < dataFile.length; j++){
+      dataFile[j].id = currId;
+      if (fs.existsSync(currentOutputFile)) {
+        var stats = fs.statSync(currentOutputFile);
+        var fileSizeInMB = stats["size"] / 1000000;
 
-      var stats = fs.statSync(currentOutputFile);
-      var fileSizeInMB = stats["size"] / 1000000;
-      if (fileSizeInMB > 1) { // larger than 1.5G 1536
+        if (fileSizeInMB >= maxFileSize && newFileFlag) {
+          console.log('filesize: ', fileSizeInMB);
+          console.log('MAX_FILE_SIZE: ', maxFileSize);
+          currentOutputFile = writeTofileName (outputFileName);
+          fs.writeFileSync(currentOutputFile, "[");
+
+        }
+      }
+      else {
         currentOutputFile = writeTofileName (outputFileName);
+        fs.writeFileSync(currentOutputFile, "[");
       }
 
-      fs.appendFileSync(currentOutputFile, JSON.stringify(dataFile.properties[j]), function (err) {
+      // if (newFileFlag)
+      //   newFileFlag = false;
+      //   fs.appendFileSync(currentOutputFile, "[", function (err) {
+      //       if (err) {
+      //           console.error(err);
+      //           return;
+      //       };
+      //   });
+
+      fs.appendFileSync(currentOutputFile, JSON.stringify(dataFile[j]), function (err) {
           if (err) {
               console.error(err);
               return;
           };
           //console.log("File has been written");
       });
-      if (i === maxIterations && j === dataFile.properties.length-1) {
+
+      if ((i === maxIterations && j === dataFile.length-1)
+      //  || (fs.statSync(currentOutputFile).size / 1000000 >= maxFileSize)
+      ){
         fs.appendFileSync(currentOutputFile, "]", function (err) {
             if (err) {
                 console.error(err);
                 return;
             };
-            console.log("appended , ");
+            console.log("appended ]");
         });
       } else {
         fs.appendFileSync(currentOutputFile, ",", function (err) {
@@ -63,24 +75,11 @@ let writeFile = function(dataFile, currId, maxIterations, outout){
       currId++;
     }
   }
-}
-//////////////////////////////////////////////////////////
-////////////////////    main    //////////////////////////
-
-var currentOutputFile = writeTofileName(outputFileName);
-
-try {
-  fs.unlinkFileSync(currentOutputFile);
-} catch(err) {
-  console.log("error when deleting file");
+  cb();
 }
 
-fs.appendFileSync(currentOutputFile, "module.exports.properties = [", function (err) {
-          if (err) {
-              console.error(err);
-              return;
-          };
-          //console.log("File has been written");
-});
+module.exports = {
+  writeTofileName: writeTofileName,
+  writeFile: writeFile
+}
 
-writeFile(data, currId, maxIterations, currentOutputFile);

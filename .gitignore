@@ -4,3 +4,5 @@ package-lock.json
 bundle.js
 .env
 properties.js
+**/UsedPreviously
+**/jsons
