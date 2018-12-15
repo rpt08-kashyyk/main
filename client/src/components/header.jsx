@@ -20,7 +20,7 @@ class FirebnbHeader extends React.Component {
 
   fillDropdownOptions() {
     let items = [];
-    for (let i = 1; i < 101; i++) {
+    for (let i = 1; i < 21; i++) {
       var path = "/property/"+i;
       items.push( <LinkContainer to={path} key={i}><MenuItem eventKey={i} key={i}>Property-{i}</MenuItem></LinkContainer>);
     }

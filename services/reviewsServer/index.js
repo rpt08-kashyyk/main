@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var dotenv = require('dotenv').config();
 
-mongoose.connect(DB_REVIEWS_HOST);
+mongoose.connect(process.env.DB_REVIEWS_HOST);
 
 var db = mongoose.connection;
 

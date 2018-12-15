@@ -7,7 +7,7 @@ var dotenv = require('dotenv').config();
 
 var app = express();
 
-mongoose.connect(DB_CALENDAR_HOST,{useNewUrlParser:true});
+mongoose.connect(process.env.DB_CALENDAR_HOST,{useNewUrlParser:true});
 
 app.use(bodyParser.json());
 
